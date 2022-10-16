@@ -1,0 +1,28 @@
+BoxLayout:
+    orientation: 'vertical'
+    GridLayout:
+        rows: 2
+        cols: 2
+        padding: 10
+        spacing: 10
+        Label:
+            text: 'Username: '
+            font_size: 30
+        TextInput:
+            id: username
+        Label:
+            text: 'Password: '
+            font_size: 30
+        TextInput:
+            id: password
+            password: True
+    Button:
+        text: 'submit'
+        font_size: 30
+        size_hint: (1, .2)
+        on_release: app.check_credentials()
+    Label:
+        id: result
+        text: 'Not Logged In'
+        font_size: 30
+        size_hint_y: 0.2
